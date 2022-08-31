@@ -1,196 +1,307 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Stylish Portfolio - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Simple line icons-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-                <li class="sidebar-nav-item"><a href="#about">About</a></li>
-                <li class="sidebar-nav-item"><a href="#services">Services</a></li>
-                <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-                <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">Stylish Portfolio</h1>
-                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-            </div>
-        </header>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                        <p class="lead mb-5">
-                            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                            <a href="https://unsplash.com/">Unsplash</a>
-                            !
-                        </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services-->
-        <section class="content-section bg-primary text-white text-center" id="services">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">What We Offer</h2>
-                </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Callout-->
-        <section class="callout">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mx-auto mb-5">
-                    Welcome to
-                    <em>your</em>
-                    next website!
-                </h2>
-                <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
+<style>
+.tickets-container .tickets-list .ticket-item .ticket-state i {
+    font-size: 13px;
+    color: #fff;
+    line-height: 20px;
+}
+.tickets-container .tickets-list .ticket-item .ticket-state {
+    position: absolute;
+    top: 13px;
+    right: -12px;
+    height: 24px;
+    width: 24px;
+    -webkit-border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 50%;
+    -moz-background-clip: padding;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #e5e5e5;
+    text-align: center;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    border: 2px solid #fff;
+}
+.bg-palegreen {
+    background-color: #a0d468!important;
+}
+.tickets-container .tickets-list .ticket-item .ticket-type .type {
+    color: #999;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.tickets-container .tickets-list .ticket-item .ticket-type {
+    line-height: 30px;
+    height: 50px;
+    padding: 10px;
+}
+.tickets-container .tickets-list .ticket-item .ticket-time i {
+    color: #ccc;
+    width:50px;
+}
+
+.tickets-container .tickets-list .ticket-item .divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 1px;
+    background-color: #eee;
+    display: inline-block;
+}
+.tickets-container .tickets-list .ticket-item .ticket-time {
+    line-height: 30px;
+    height: 50px;
+    padding: 10px;
+}
+.tickets-container .tickets-list .ticket-item .ticket-user .user-company {
+    margin-left: 2px;
+    color: #999;
+}
+.tickets-container .tickets-list .ticket-item .ticket-user .user-at {
+    margin-left: 2px;
+    color: #ccc;
+    font-size: 13px;
+}
+.tickets-container .tickets-list .ticket-item .ticket-user .user-name {
+    margin-left: 5px;
+    font-size: 13px;
+}
+.tickets-container .tickets-list .ticket-item .ticket-user .user-avatar {
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+.tickets-container .tickets-list .ticket-item .ticket-user {
+    height: 50px;
+    padding: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.tickets-container .tickets-list .ticket-item {
+    position: relative;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -webkit-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px;
+    background-clip: padding-box;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    vertical-align: top;
+}
+.tickets-container .tickets-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.tickets-container {
+    position: relative;
+    padding: 25px 25px;
+    background-color: #f5f5f5;
+}
+.widget-main.no-padding {
+    padding: 0;
+}
+.widget-main {
+    padding: 12px;
+}
+.no-padding {
+    padding: 0!important;
+}
+.widget-body {
+    background-color: #fbfbfb;
+    -webkit-box-shadow: 1px 0 10px 1px rgba(0,0,0,.3);
+    -moz-box-shadow: 1px 0 10px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 0 10px 1px rgba(0,0,0,.3);
+}
+
+.widget-header>.widget-caption {
+    line-height: 33px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    text-align: left;
+    font-weight: 400!important;
+    font-size: 13px;
+}
+
+.widget-header .widget-icon {
+    display: block;
+    width: 30px;
+    height: 32px;
+    position: relative;
+    float: left;
+    font-size: 111%;
+    line-height: 32px;
+    text-align: center;
+    margin-left: -10px;
+}
+.themesecondary {
+    color: #5bc0de !important;
+}
+.widget-header.bordered-bottom {
+    border-bottom: 3px solid #fff;
+}
+.widget-header {
+    position: relative;
+    min-height: 35px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.3);
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    color: #555;
+    padding-left: 12px;
+    text-align: right;
+}
+.bordered-themesecondary {
+    border-color: #5bc0de !important;
+}
+.widget-box {
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 3px 0 30px 0;
+}
+</style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container bootstrap snippets bootdey">
+    <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="widget-box">
+                    <div class="widget-header bordered-bottom bordered-themesecondary">
+                        <i class="widget-icon fa fa-tags themesecondary"></i>
+                        <h5 class="widget-caption themesecondary">Room List</h5>
+                    </div><!--Widget Header-->
+                    <div class="widget-body">
+                        <div class="widget-main no-padding">
+                            <div class="tickets-container">
+                                <ul class="tickets-list">
+                                    <li class="ticket-item">
+                                        <div class="row">
+                                            <div class="ticket-user col-md-6 col-sm-12">
+                                                <img src="https://bootdey.com/img/Content/user_1.jpg" class="user-avatar">
+                                                <span class="user-name">Adam Johnson</span>
+                                                <span class="user-at">at</span>
+                                                <span class="user-company">Microsoft</span>
+                                            </div>
+                                            <div class="ticket-time  col-md-4 col-sm-6 col-xs-12">
+                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">1 Hours Ago</span>
+                                            </div>
+                                            <div class="ticket-type  col-md-2 col-sm-6 col-xs-12">
+                                                <span class="divider hidden-xs"></span>
+                                                <span class="type">Issue</span>
+                                            </div>
+                                            <div class="ticket-state bg-palegreen">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ticket-item">
+                                        <div class="row">
+                                            <div class="ticket-user col-md-6 col-sm-12">
+                                                <img src="https://bootdey.com/img/Content/user_2.jpg" class="user-avatar">
+                                                <span class="user-name">Divyia Phillips</span>
+                                                <span class="user-at">at</span>
+                                                <span class="user-company">Dribbble</span>
+                                            </div>
+                                            <div class="ticket-time  col-md-4 col-sm-6 col-xs-12">
+                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">3 Hours Ago</span>
+                                            </div>
+                                            <div class="ticket-type  col-md-2 col-sm-6 col-xs-12">
+                                                <span class="divider hidden-xs"></span>
+                                                <span class="type">Payment</span>
+                                            </div>
+                                            <div class="ticket-state bg-palegreen">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ticket-item">
+                                        <div class="row">
+                                            <div class="ticket-user col-md-6 col-sm-12">
+                                                <img src="https://bootdey.com/img/Content/user_3.jpg" class="user-avatar">
+                                                <span class="user-name">Nicolai Larson</span>
+                                                <span class="user-at">at</span>
+                                                <span class="user-company">Google</span>
+                                            </div>
+                                            <div class="ticket-time  col-md-4 col-sm-6 col-xs-12">
+                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">18 Hours Ago</span>
+                                            </div>
+                                            <div class="ticket-type  col-md-2 col-sm-6 col-xs-12">
+                                                <span class="divider hidden-xs"></span>
+                                                <span class="type">Issue</span>
+                                            </div>
+                                            <div class="ticket-state bg-darkorange">
+                                                <i class="fa fa-times"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ticket-item">
+                                        <div class="row">
+                                            <div class="ticket-user col-md-6 col-sm-12">
+                                                <img src="https://bootdey.com/img/Content/user_1.jpg" class="user-avatar">
+                                                <span class="user-name">Bill Jackson</span>
+                                                <span class="user-at">at</span>
+                                                <span class="user-company">Mabna</span>
+                                            </div>
+                                            <div class="ticket-time  col-md-4 col-sm-6 col-xs-12">
+                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">2 days Ago</span>
+                                            </div>
+                                            <div class="ticket-type  col-md-2 col-sm-6 col-xs-12">
+                                                <span class="divider hidden-xs"></span>
+                                                <span class="type">Payment</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="ticket-item">
+                                        <div class="row">
+                                            <div class="ticket-user col-md-6 col-sm-12">
+                                                <img src="https://bootdey.com/img/Content/user_2.jpg" class="user-avatar">
+                                                <span class="user-name">Eric Clapton</span>
+                                                <span class="user-at">at</span>
+                                                <span class="user-company">Musicker</span>
+                                            </div>
+                                            <div class="ticket-time  col-md-4 col-sm-6 col-xs-12">
+                                                <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                                                <i class="fa fa-clock-o"></i>
+                                                <span class="time">2 days Ago</span>
+                                            </div>
+                                            <div class="ticket-type  col-md-2 col-sm-6 col-xs-12">
+                                                <span class="divider hidden-xs"></span>
+                                                <span class="type">Info</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Call to Action-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
-                <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
-            </div>
-        </section>
-        <!-- Map-->
-        <div class="map" id="contact">
-            <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-            <br />
-            <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
         </div>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-0">Copyright &copy; Your Website 2022</p>
-            </div>
-        </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-</html>
+    </div>
+</div>
