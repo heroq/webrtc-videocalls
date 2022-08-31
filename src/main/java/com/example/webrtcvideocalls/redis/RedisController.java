@@ -16,17 +16,15 @@ public class RedisController {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
-    @GetMapping ("/redisTest")
+    @GetMapping ("/room/create/{key}")
     @ResponseBody
-    public String addRedisKey() {
+    public String createRoom(@PathVariable String key) {
         ValueOperations<String, String> vop = redisTemplate.opsForValue();
-        vop.set("yellow", "banana");
-        vop.set("red", "apple");
-        vop.set("green", "watermelon");
-        return "ok";
+        vop.set(key, "create");
+        return "success";
     }
 
-    @GetMapping("/redisTest/{key}")
+    @GetMapping("/room/read/{key}")
     public ResponseEntity<?> getRedisKey(@PathVariable String key) {
         ValueOperations<String, String> vop = redisTemplate.opsForValue();
         String value = vop.get(key);
