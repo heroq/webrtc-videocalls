@@ -8,6 +8,7 @@ public class RoomController {
 
     @GetMapping("/")
     public String index() {
+
         return "index";
     }
 }
