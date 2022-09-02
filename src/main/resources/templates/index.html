@@ -36,9 +36,7 @@
 </div>
 </body>
 <script>
-    (() => {
-     roomRefrush();
-    })();
+    (() => roomRefrush())();
 
     async function roomRefrush(){
         let pRoom = await fetch("/room/get");
