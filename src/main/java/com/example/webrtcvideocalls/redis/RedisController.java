@@ -4,11 +4,9 @@ import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @RestController
@@ -19,19 +17,17 @@ public class RedisController {
 
     /**
      * 방 생성
-     * @param key
      * @return
      */
-    @GetMapping ("/room/set/{key}")
+    @PostMapping("/room/set")
     @ResponseBody
-    public String setRoom(@PathVariable String key) {
+    public String setRoom(@RequestBody HashMap<String, Object> map) {
         ValueOperations<String, String> vop = redisTemplate.opsForValue();
-
         // 랜덤 방 번호 지정 5글자
         Random rnd = new Random();
         StringBuffer sb = new StringBuffer();
         for( int i = 0; i < 5; i++) sb.append((rnd.nextInt(10)));
-        vop.set(key, sb.toString());
+        vop.set(map.get("key").toString(), sb.toString());
         return "success";
     }
 

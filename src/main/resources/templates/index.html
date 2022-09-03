@@ -14,7 +14,7 @@
                 <div class="widget-box">
                     <div class="widget-header bordered-bottom bordered-themesecondary">
                         <i class="widget-icon fa fa-tags themesecondary"></i>
-                        <h5 class="widget-caption themesecondary">방 목록</h5>
+                        <h5 class="widget-caption themesecondary">화상전화 방 목록</h5>
                     </div><!--Widget Header-->
                     <div class="widget-body">
                         <div class="widget-main no-padding">
@@ -61,9 +61,12 @@
                     const roomKey = element.querySelector(".col-md-6.col-sm-12").innerText;
                     let promise = await fetch("/room/get/" + roomKey);
                     if (promise.ok) {
-                        promise.json().then(result => console.log(result));
+                        if(confirm(roomKey+"에 접속 하시겠습니까?")){
+                            // 여기에서 이제 화상전화 페이지로 전환
+                            promise.json().then(result => console.log(result));
+                        }
                     } else {
-                        console.log("failed");
+                        alert("방 목록을 불러오는데 실패 하였습니다.");
                     }
                 }));
             });
@@ -72,9 +75,19 @@
 
     document.querySelector("#roomCreate").addEventListener("click", async () => {
         const roomKey = document.querySelector("#roomKey").value;
-        let room = await fetch("/room/set/"+roomKey);
+        let key = {
+            'key':roomKey
+        }
+        let room = await fetch("/room/set", {
+            method: "post",
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(key)
+        });
         if(room.ok){
             alert("방을 생성 하였습니다.");
+            document.querySelector("#roomKey").value = "";
             roomRefrush();
         }else{
             alert("방 생성에 실패 하였습니다.");
